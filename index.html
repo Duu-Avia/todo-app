@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="hero">
-      <div class="circle-progress">
-        <div class="outer">
-          <div class="inner"><div id="number">65%</div></div>
+        <div class="circle-progress">
+          <div class="outer">
+            <div class="inner"><div id="number">0</div></div>
+          </div>
+           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+             <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="80%" stop-color="#673ab7" />
+             </linearGradient>
+          </defs>
+          <circle id="circleProgress" cx="80" cy="80" r="70" stroke-linecap="round" />
+  </svg>
         </div>
-         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-        <defs>
-           <linearGradient id="GradientColor">
-              <stop offset="0%" stop-color="#e91e63" />
-              <stop offset="80%" stop-color="#673ab7" />
-           </linearGradient>
-        </defs>
-        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
-</svg>
-      </div>
-     
-      <div class="title-text">MoonToDo app</div>
-    <!-- <div id="addTask">
-      <button class="buttonstyle" onclick="addTask()">add task</button>
-      <button>Edit status</button>
-    </div> -->
- 
-  </div>
-  <div class="input">
-    <input id="input-box" type="text" placeholder="Та хийх ажлаа оруулна уу?">
-    <button id="new-task-button" type="submit" onclick="addTask()">+</button>
-  </div>
-  <ul class="text-container" id="task-list">
-    <!-- <li class="list">
-      <input type="checkbox" id="check-1">
-      <label class="custom-checkbox" for="check-1">
-        <svg fill="transparent" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-          <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-      </label>
-      <label for="" class="todo-text">gulugnii shud</label>
-      <button class="edit-button">
-        <svg  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
-      </button>
-      <button class="delete-button">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-      </button>
-    </li> -->
-  
+       
+        <div class="title-text">MoonToDo app</div>
    
-  </ul>
-    <script src="toDo.js"></script> 
-  </body>
+    </div>
+    
+    <div class="input">
+        <input id="input-bar" type="text" placeholder="Та хийх ажлаа оруулна уу?">
+        <button id="new-task-button" type="submit" onclick="addTask()">+</button>
+      </div>
+    <div id="content" style="background-color: rgb(134, 31, 128)"></div>
+    <script src="toDo.js"></script>
+</body>
 </html>
