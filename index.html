@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="hero">
-        <div class="circle-progress">
-          <div class="outer">
-            <div class="inner"><div id="number">0</div></div>
-          </div>
-           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-          <defs>
-             <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="80%" stop-color="#673ab7" />
-             </linearGradient>
-          </defs>
-          <circle id="circleProgress" cx="80" cy="80" r="70" stroke-linecap="round" />
-  </svg>
+      <div class="circle-progress">
+        <div class="outer">
+          <div class="inner"><div id="number">0</div></div>
         </div>
-       
-        <div class="title-text">MoonToDo app</div>
-   
-    </div>
-    
-    <div class="input">
-        <input id="input-bar" type="text" placeholder="Та хийх ажлаа оруулна уу?">
-        <button id="new-task-button" type="submit" onclick="addTask()">+</button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+        >
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="80%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle
+            id="circleProgress"
+            cx="80"
+            cy="80"
+            r="70"
+            stroke-linecap="round"
+          />
+        </svg>
       </div>
+
+      <div class="title-text">MoonToDo app</div>
+    </div>
+
+    <div class="input">
+      <input
+        id="input-bar"
+        type="text"
+        placeholder="Та хийх ажлаа оруулна уу?"
+      />
+      <button id="new-task-button" type="submit" onclick="addTask()">+</button>
+    </div>
     <div id="content" style="background-color: rgb(134, 31, 128)"></div>
     <script src="toDo.js"></script>
-</body>
+  </body>
 </html>

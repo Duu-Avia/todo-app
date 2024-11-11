@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #getNameId {
@@ -8,92 +8,90 @@
   margin-top: 50vh;
 }
 body {
-    background: url(picture/pxfuel.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15vh;
+  background: url(picture/pxfuel.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
 }
 
 .hero {
-    background-image: url(picture/pexels-codioful-7130560.jpg);
-    background-size: cover;
-    width: 40%;
-    padding: 15px 0px;
-    border-radius: 30px;
-    opacity: 0.7;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  background-image: url(picture/pexels-codioful-7130560.jpg);
+  background-size: cover;
+  width: 40%;
+  padding: 15px 0px;
+  border-radius: 30px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.circle-progress{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.circle-progress {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.outer{
-    width: 160px;
-    height: 160px;
-    border: 1px solid none;
-    border-radius: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    box-shadow: 6px 6px 6px -1px rgba(0, 0, 0, 0.15), -6px -6px -10px -1px rgba(225,225,225,0.7);
+.outer {
+  width: 160px;
+  height: 160px;
+  border: 1px solid none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 6px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px -10px -1px rgba(225, 225, 225, 0.7);
 }
-.inner{
-    width: 120px;
-    height: 120px;
-    border: 1px solid none;
-    border-radius: 50%;
-    box-shadow:  4px 4px 6px -1px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.inner {
+  width: 120px;
+  height: 120px;
+  border: 1px solid none;
+  border-radius: 50%;
+  box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-circle{
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    opacity: 0.8;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim 2s linear forwards;
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  opacity: 0.8;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 0;
+  animation: anim 2s linear forwards;
 }
- 
-.circle-progress svg{
-  
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.circle-progress svg {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-@keyframes anim {
+/* @keyframes anim {
     100%{
         stroke-dashoffset: 165;
     }
    
-}
-.input input{
-    width: 30vw;
-    margin-top: 100px;
-    color: #ffff;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
-    border: 1px none;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    
-    
+} */
+.input input {
+  width: 30vw;
+  margin-top: 100px;
+  color: #ffff;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
+  border: 1px none;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 /* .text-container {
@@ -101,18 +99,12 @@ circle{
     justify-content: space-between;
 } */
 
-*content {
-    background-color: rgb(55, 29, 79);
-    opacity: 0.7;
-    width: 30vw;
-    border-radius: 50px;
-   
-    display: flex;
-    align-items: center;
-
-    
- 
-}
+/* #content {
+  background-color: rgb(55, 29, 79);
+  opacity: 0.7;
+  width: 30vw;
+  border-radius: 50px;
+} */
 
 /* .todo-text{
     flex-grow: 1;
@@ -121,15 +113,15 @@ circle{
 } */
 
 #delete-button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 #edit-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
 }
 /* .custom-checkbox{
     border: 2px solid rgb(198, 52, 186);
@@ -154,3 +146,12 @@ input[type="checkbox"]:checked ~ .todo-text{
 .list input{
     display: none;
 } */
+
+/* #textdeco {
+  display: inline;
+  text-decoration: line-through;
+} */
+
+/* .done {
+  text-decoration: line-through;
+}  */
