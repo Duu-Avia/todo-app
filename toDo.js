@@ -2,8 +2,10 @@ let array = [];
 
 function print() {
   const output = document.getElementById("content");
+
   output.innerHTML = "";
   for (let i = 0; i < array.length; i++) {
+    
     const element = document.createElement("div");
     const checkBox = document.createElement("input");
     let elementText = document.createElement("p");
@@ -20,29 +22,89 @@ function print() {
     editBut.onclick = function () {
       const newName = prompt("Enter new task name:");
       editTask(i, newName);
-      console.log(array);
     };
 
     delBut.onclick = function () {
       deleteTask(i);
-      console.log(array);
     };
-
+   
     checkBox.onclick = function () {
+      
       if (checkBox.checked == true) {
         elementText.style.textDecoration = "line-through";
+        finished++;
       } else {
         elementText.style.textDecoration = "none";
+        finished--;
       }
+  
+      circleLoader()
     };
-
     element.appendChild(checkBox);
     element.appendChild(elementText);
     element.appendChild(editBut);
     element.appendChild(delBut);
     output.appendChild(element);
+
   }
+
 }
+
+function circleLoader (){
+  let circleBar = document.getElementById("circleProgress")
+  let stroke = circleBar.style.strokeDashoffset;
+  let divided = stroke / totalNumber ;
+  // let totalDivided = divided + divided
+  
+  
+  
+  // stroke = stroke - totalDivided
+
+  circleBar.style.strokeDashoffset = Math.ceil(stroke-divided)
+ console.log(totalNumber)
+  console.log(stroke)
+}
+
+setInterval(() => {
+  if (totalNumber < array.length) {
+    // clearInterval();
+    totalNumber++;
+    number.innerHTML = finished + "/" + totalNumber;
+ 
+  } 
+
+  else {
+    totalNumber = totalNumber - 1;
+  } 
+}, 25);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function addTask() {
   const name = document.getElementById("input-bar").value;
@@ -50,11 +112,6 @@ function addTask() {
   array.push({ name: name });
   print();
 }
-
-// function toggleStatus(index) {
-//   array[index].status = "done";  // todo
-//   print();
-// }
 
 function deleteTask(index) {
   array.splice(index, 1);
@@ -66,36 +123,13 @@ function editTask(index, newName) {
   print();
 }
 
-function checkToggle() {}
+
 
 let number = document.getElementById("number");
 let totalNumber = 0;
 let finished = 0;
-setInterval(() => {
-  if (totalNumber < array.length) {
-    // clearInterval();
-    totalNumber++;
-    number.innerHTML = finished + "/" + totalNumber;
-  } else {
-    totalNumber = totalNumber - 1;
-  }
-}, 25);
 
-function circleProc() {
-  let circleBar = document.getElementById("circleProgress");
-  stroke = circleBar.style.strokeDashoffset;
 
-  stroke = stroke - totalNumber * 1;
 
-  circleBar.style.strokeDashoffset = stroke;
 
-  console.log(totalNumber);
-}
 
-function textDecoration(index) {
-  array[index].status = "done";
-
-  print();
-}
-console.log(`sain
-  baina`);
