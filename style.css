@@ -67,8 +67,8 @@ body {
   stroke-width: 20px;
   opacity: 0.8;
   stroke-dasharray: 472;
-  stroke-dashoffset: 470;
-  animation: anim 2s linear forwards;
+  transition: 0.4s;
+  
 }
 
 .circle-progress svg {
@@ -76,12 +76,7 @@ body {
   top: 0;
   left: 0;
 }
-/* @keyframes anim {
-    100%{
-        stroke-dashoffset: 165;
-    }
-   
-} */
+
 .input input {
   width: 30vw;
   margin-top: 100px;

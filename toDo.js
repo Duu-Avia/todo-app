@@ -36,6 +36,8 @@ function print() {
       } else {
         elementText.style.textDecoration = "none";
         finished--;
+        
+     
       }
   
       circleLoader()
