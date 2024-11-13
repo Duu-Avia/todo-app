@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=brush"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add"
+    />
   </head>
   <body>
     <div class="hero">
@@ -24,7 +37,8 @@
               <stop offset="80%" stop-color="#673ab7" />
             </linearGradient>
           </defs>
-          <circle style="stroke-dashoffset: 470;" 
+          <circle
+            style="stroke-dashoffset: 470"
             id="circleProgress"
             cx="80"
             cy="80"
@@ -34,7 +48,10 @@
         </svg>
       </div>
 
-      <div class="title-text">MoonToDo app</div>
+      <div class="title-text">
+        MoonToDo app
+        <div class="small-text">Keep it up!!!</div>
+      </div>
     </div>
 
     <div class="input">
@@ -43,9 +60,15 @@
         type="text"
         placeholder="Та хийх ажлаа оруулна уу?"
       />
-      <button id="new-task-button" type="submit" onclick="addTask()">+</button>
+      <span
+        id="new-task-button"
+        onclick="addTask()"
+        class="material-symbols-outlined"
+      >
+        add
+      </span>
     </div>
-    <div id="content" style="background-color: rgb(134, 31, 128)"></div>
+    <div id="content"></div>
     <script src="toDo.js"></script>
   </body>
 </html>

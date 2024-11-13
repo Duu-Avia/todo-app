@@ -5,20 +5,28 @@ function print() {
 
   output.innerHTML = "";
   for (let i = 0; i < array.length; i++) {
-    
     const element = document.createElement("div");
+    const textAndCheckbx = document.createElement("div");
+    textAndCheckbx.setAttribute("class", "textAndCheckbx");
     const checkBox = document.createElement("input");
+    element.setAttribute("class", "div-container");
     let elementText = document.createElement("p");
-    checkBox.setAttribute("type", "checkbox");
+    elementText.setAttribute("class", "textstyle");
+    checkBox.setAttribute("type", "checkBox");
+    checkBox.setAttribute("class", "checkBox");
 
     elementText.innerText = array[i].name;
-
     elementText.style.textDecoration = "none";
-    const editBut = document.createElement("button");
-    editBut.innerText = "edit";
-    const delBut = document.createElement("button");
-    delBut.innerText = "delete";
-
+    const buttonDiv = document.createElement("div");
+    buttonDiv.setAttribute("class", "buttonDiv");
+    const editBut = document.createElement("span");
+    editBut.setAttribute("class", "editBut");
+    editBut.innerHTML =
+      '<span class="material-symbols-outlined">' + "brush" + "</span>";
+    const delBut = document.createElement("span");
+    delBut.innerHTML =
+      '<span class="material-symbols-outlined">' + "delete" + "</span>";
+    delBut.setAttribute("class", "delBut");
     editBut.onclick = function () {
       const newName = prompt("Enter new task name:");
       editTask(i, newName);
@@ -27,86 +35,49 @@ function print() {
     delBut.onclick = function () {
       deleteTask(i);
     };
-   
+
     checkBox.onclick = function () {
-      
       if (checkBox.checked == true) {
         elementText.style.textDecoration = "line-through";
         finished++;
       } else {
         elementText.style.textDecoration = "none";
         finished--;
-        
-     
       }
-  
-      circleLoader()
+      circleLoader();
     };
-    element.appendChild(checkBox);
-    element.appendChild(elementText);
-    element.appendChild(editBut);
-    element.appendChild(delBut);
+    element.appendChild(textAndCheckbx);
+    textAndCheckbx.appendChild(checkBox);
+    textAndCheckbx.appendChild(elementText);
+    buttonDiv.appendChild(editBut);
+    buttonDiv.appendChild(delBut);
+    element.appendChild(buttonDiv);
     output.appendChild(element);
-
   }
-
 }
 
-function circleLoader (){
-  let circleBar = document.getElementById("circleProgress")
-  let stroke = circleBar.style.strokeDashoffset;
-  let divided = stroke / totalNumber ;
-  // let totalDivided = divided + divided
-  
-  
-  
-  // stroke = stroke - totalDivided
-
-  circleBar.style.strokeDashoffset = Math.ceil(stroke-divided)
- console.log(totalNumber)
-  console.log(stroke)
-}
+let number = document.getElementById("number");
+let totalNumber = 0;
+let finished = 0;
 
 setInterval(() => {
   if (totalNumber < array.length) {
-    // clearInterval();
+    clearInterval();
     totalNumber++;
     number.innerHTML = finished + "/" + totalNumber;
- 
-  } 
-
-  else {
+  } else {
     totalNumber = totalNumber - 1;
-  } 
+  }
 }, 25);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function circleLoader() {
+  let circleBar = document.getElementById("circleProgress");
+  let stroke = circleBar.style.strokeDashoffset;
+  const divided = 472 / array.length;
+  circleBar.style.strokeDashoffset = Math.ceil(stroke - divided);
+  console.log(array.length);
+  console.log(stroke);
+}
 
 function addTask() {
   const name = document.getElementById("input-bar").value;
@@ -124,14 +95,3 @@ function editTask(index, newName) {
   array[index].name = newName;
   print();
 }
-
-
-
-let number = document.getElementById("number");
-let totalNumber = 0;
-let finished = 0;
-
-
-
-
-

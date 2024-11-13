@@ -17,12 +17,12 @@ body {
 }
 
 .hero {
-  background-image: url(picture/pexels-codioful-7130560.jpg);
+  background-image: url(picture/moonbackground.jpg);
   background-size: cover;
   width: 40%;
   padding: 15px 0px;
   border-radius: 30px;
-  opacity: 0.7;
+  opacity: 0.6;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -55,10 +55,13 @@ body {
   height: 120px;
   border: 1px solid none;
   border-radius: 50%;
-  box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #b82298;
+  font-weight: 500;
 }
 
 #circleProgress {
@@ -68,7 +71,6 @@ body {
   opacity: 0.8;
   stroke-dasharray: 472;
   transition: 0.4s;
-  
 }
 
 .circle-progress svg {
@@ -79,9 +81,9 @@ body {
 
 .input input {
   width: 30vw;
-  margin-top: 100px;
+  margin-top: 70px;
   color: #ffff;
-  padding: 10px;
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
   border: 1px none;
@@ -89,23 +91,9 @@ body {
   margin-bottom: 30px;
 }
 
-/* .text-container {
-    display: flex;
-    justify-content: space-between;
-} */
-
-/* #content {
-  background-color: rgb(55, 29, 79);
-  opacity: 0.7;
-  width: 30vw;
-  border-radius: 50px;
-} */
-
-/* .todo-text{
-    flex-grow: 1;
-    padding: 20px;
-    
-} */
+.textstyle {
+  color: white;
+}
 
 #delete-button {
   background: none;
@@ -118,35 +106,59 @@ body {
   cursor: pointer;
   margin-right: 30px;
 }
-/* .custom-checkbox{
-    border: 2px solid rgb(198, 52, 186);
-    border-radius:50%;
-    min-height: 20px;
-    min-width: 20px
+
+.div-container {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: rgba(144, 69, 214, 0.057);
+  box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
+  margin-top: 40px;
+  border-radius: 30px;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox{
-    background-color: rgb(198, 52, 186);
+.textAndCheckbx {
+  display: flex;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox svg{
-    fill: black;
+.checkBox {
+  margin-right: 10px;
+  accent-color: #9d3039;
+  background-color: none;
+  line-height: 2;
 }
 
-input[type="checkbox"]:checked ~ .todo-text{
-    text-decoration: line-through;
-    color: gray;
+.editBut {
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  color: #ffff;
 }
 
-.list input{
-    display: none;
-} */
+.delBut {
+  border: none;
+  color: #ffff;
+  cursor: pointer;
+}
 
-/* #textdeco {
-  display: inline;
-  text-decoration: line-through;
-} */
+.title-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+}
 
-/* .done {
-  text-decoration: line-through;
-}  */
+.small-text {
+  font-size: 1rem;
+}
+
+#new-task-button {
+  color: gray;
+  background-image: 10vw;
+  cursor: pointer;
+}
+
+.textstyle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+}
