@@ -25,7 +25,7 @@ function print() {
       '<span class="material-symbols-outlined">' + "brush" + "</span>";
     const delBut = document.createElement("span");
     delBut.innerHTML =
-      '<span class="material-symbols-outlined">' + "delete" + "</span>";
+      '<span class="material-symbols-outlined">' + "delete_forever" + "</span>";
     delBut.setAttribute("class", "delBut");
     editBut.onclick = function () {
       const newName = prompt("Enter new task name:");
@@ -44,7 +44,16 @@ function print() {
         elementText.style.textDecoration = "none";
         finished--;
       }
-      circleLoader();
+      circleLoader(checkBox.checked);
+      if (array.length <= finished) {
+        document.getElementById("popUp").style.display = "flex";
+        document
+          .getElementById("closeImg")
+          .addEventListener("click", function () {
+            document.getElementById("popUp").style.display = "none";
+          });
+      }
+      console.log(totalNumber, finished);
     };
     element.appendChild(textAndCheckbx);
     textAndCheckbx.appendChild(checkBox);
@@ -70,13 +79,16 @@ setInterval(() => {
   }
 }, 25);
 
-function circleLoader() {
+function circleLoader(checked) {
   let circleBar = document.getElementById("circleProgress");
   let stroke = circleBar.style.strokeDashoffset;
   const divided = 472 / array.length;
-  circleBar.style.strokeDashoffset = Math.ceil(stroke - divided);
-  console.log(array.length);
-  console.log(stroke);
+
+  if (checked) {
+    circleBar.style.strokeDashoffset = Math.ceil(Number(stroke) - divided);
+  } else {
+    circleBar.style.strokeDashoffset = Math.ceil(Number(stroke) + divided);
+  }
 }
 
 function addTask() {
