@@ -12,14 +12,10 @@ body {
   background: url(picture/pxfuel.jpg);
   background-size: 180%;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 15vh;
-  
-  
- 
 }
 
 .hero {
@@ -69,7 +65,7 @@ body {
   color: #b82298;
   font-weight: 500;
 }
-  
+
 #circleProgress {
   fill: none;
   stroke: url(#GradientColor);
@@ -172,6 +168,8 @@ body {
 .input {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 99;
 }
 
 #new-task-button {
@@ -192,8 +190,6 @@ body {
   width: 100%;
   height: 100%;
   display: none;
-  
-
 }
 
 .popUp-content {
@@ -210,7 +206,6 @@ body {
   position: relative;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 7px 4px 50px -4px rgba(209, 209, 209, 0.6);
-  
 }
 
 #closeImg {
@@ -222,46 +217,38 @@ body {
   cursor: pointer;
 }
 
-
-.main-text{
+.main-text {
   margin-left: auto;
   margin-right: auto;
 }
 
-
-
-
-
-
 .moon-container {
-
   width: 100%;
   height: 100%;
-
 }
 
-.moon{
+.moon {
   top: 0;
   left: 0;
   position: absolute;
   overflow: hidden;
- 
+  z-index: 0;
+
   opacity: 0.2;
 }
 
 @keyframes animate {
   0% {
     opacity: 0.3;
-    
+
     transform: translateY(0) rotate(0deg);
   }
-  
-  
+
   100% {
     opacity: 0;
-    
+
     transform: translateY(1500px) rotate(720deg);
-  } 
+  }
 }
 
 .moon {
@@ -269,37 +256,28 @@ body {
   width: 70px;
   height: 78px;
   opacity: 0.2;
-  position:absolute;
+  position: absolute;
   display: block;
   top: -500px;
   animation: animate 20s linear infinite;
   animation-duration: 80s;
 }
 
-
-
-.moon:nth-child(1){
-left: 20%;
-width: 20vw;
-height: 24vw;
-animation-delay: 7s;
+.moon:nth-child(1) {
+  left: 20%;
+  width: 20vw;
+  height: 24vw;
+  animation-delay: 7s;
 }
 
-
-
-
-
-.moon:nth-child(2){
+.moon:nth-child(2) {
   left: 10%;
   width: 30vw;
   height: 35vw;
   animation-delay: 0s;
-
-
-  
 }
 
-
-
-
-
+#content {
+  position: relative;
+  z-index: 100;
+}
